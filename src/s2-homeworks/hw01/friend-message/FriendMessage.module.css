@@ -23,7 +23,7 @@
     background-color: #F5F7FB;
 ;
     padding: 8px 13px;
-    border-radius: 15px;
+    border-radius: 15px 15px 15px 0;
     font-weight: 400;
 
     box-shadow: 0 1px 2px 0 #1D21261A, 0 5px 20px 0 #1D212608;
@@ -33,11 +33,11 @@
     &::after{
         content: '';
         position: absolute;
-        left: -8px;
-        bottom: 0px;
-        border-bottom: 15px solid #F5F7FB;
-        border-right: 10px solid transparent;
-        border-left: 15px solid transparent;
+        left: -13px;
+        bottom: 0;
+        border-bottom: 10px solid #F5F7FB;
+        border-right: 19px solid transparent;
+        border-left: 16px solid transparent;
     }
 }
 
