@@ -1,11 +1,11 @@
 .App {
     --header_height: 60px;
     width: 100vw;
-    height: 100vh;
+    /*height: 100vh;*/
     overflow-x: hidden;
 }
 
-.hw1{
+.hw1, .hw2{
     max-width: 1280px;
     margin: 0 auto;
     width: 100%;
