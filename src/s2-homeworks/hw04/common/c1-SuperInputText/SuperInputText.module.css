@@ -1,20 +1,46 @@
 .input:focus {
+    outline: 1px solid #D1D1D1;
 }
 
 .input {
+    width: 372px;
+    height: 36px;
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
+    padding: 5px 10px;
 }
 
 .inputWrapper {
+    font-family: Montserrat, sans-serif;
+    position: relative;
 }
 
 .superInput {
 }
 
 .errorInput {
+    border: 1px solid #CC1439;
 }
 
 .errorInput:focus {
+    outline: 1px solid #CC1439;
 }
 
 .error {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: left;
+    color: #CC1439;
+    transition: all 0.2s ease-in-out;
+
+    position: absolute;
+    top: -15px;
+    left: 0;
+
+    input:active + &{
+        font-size: 14px;
+        line-height: 17px;
+    }
 }

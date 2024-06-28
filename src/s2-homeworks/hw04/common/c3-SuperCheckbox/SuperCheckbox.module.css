@@ -35,7 +35,8 @@
 }
 
 .checkbox:focus {
-    border-color: #0059b3;
+    border: 1px solid #0059b3;
+    outline: none;
 }
 
 .spanClassName {
