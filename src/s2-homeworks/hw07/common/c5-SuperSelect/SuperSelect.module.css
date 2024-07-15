@@ -1,7 +1,22 @@
 .select {
+    width: 165px;
+    height: 25px;
+    border-radius: 2px;
+    border: 1px solid #C2C2C2;
+    padding: 2px 0 3px 10px;
+
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: left;
+    color: black;
+}
+.option{
 }
 
 .select:focus {
+    outline: 1px solid #C2C2C2;
 }
 
 
