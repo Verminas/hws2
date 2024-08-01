@@ -1,7 +1,16 @@
 .buttonsContainer {
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
 }
 
 .clock {
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: black;
 }
 
 .watch {
@@ -11,4 +20,8 @@
 }
 
 .more {
+    font-size: 16px;
+    line-height: 20px;
+    color: #00000080;
+    margin-top: 8px;
 }
