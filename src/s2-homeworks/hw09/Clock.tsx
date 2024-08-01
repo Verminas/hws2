@@ -4,7 +4,7 @@ import {restoreState} from '../hw06/localStorage/localStorage'
 import s from './Clock.module.css'
 
 function Clock() {
-    const [timerId, setTimerId] = useState<any | undefined>(undefined)
+    const [timerId, setTimerId] = useState<number | undefined>(undefined)
     // for autotests // не менять // можно подсунуть в локалСторэдж нужную дату, чтоб увидеть как она отображается
     const [date, setDate] = useState<Date>(new Date(restoreState('hw9-date', Date.now())))
     const [show, setShow] = useState<boolean>(false)
@@ -13,9 +13,9 @@ function Clock() {
         // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
         // сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
 
-        const intervalID = setInterval(() => {
+        const intervalID = Number(setInterval(() => {
             setDate(new Date())
-        }, 1000)
+        }, 1000))
 
         setTimerId(intervalID)
 
@@ -23,7 +23,6 @@ function Clock() {
 
     const stop = () => {
         // пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
-        setDate(new Date())
         clearInterval(timerId)
         setTimerId(undefined)
     }
@@ -35,16 +34,8 @@ function Clock() {
         setShow(false)
     }
 
-    const formatterTime = new Intl.DateTimeFormat("ru", {
-        hour: "numeric",
-        minute: "numeric",
-        second: "numeric"
-    });
-
-    const formatterDate = new Intl.DateTimeFormat("ru")
-
-    const stringTime = formatterTime.format(date) || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
-    const stringDate = formatterDate.format(date) || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
+    const stringTime = date.toLocaleTimeString()|| <br/>
+    const stringDate = date.toLocaleDateString() || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
 
