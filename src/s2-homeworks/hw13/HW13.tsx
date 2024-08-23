@@ -11,7 +11,7 @@ import errorUnknown from './images/error.svg'
 /*
 * 1 - дописать функцию send +
 * 2 - дизэйблить кнопки пока идёт запрос +
-* 3 - сделать стили в соответствии с дизайном
+* 3 - сделать стили в соответствии с дизайном +
 * */
 
 const HW13 = () => {
@@ -65,7 +65,7 @@ const HW13 = () => {
         <div className={s.buttonsContainer}>
           <SuperButton
             id={'hw13-send-true'}
-            onClick={send(true)}
+            onClick={() => send(true)}
             xType={'secondary'}
             // дописать
             disabled={info === loading}
@@ -75,7 +75,7 @@ const HW13 = () => {
           </SuperButton>
           <SuperButton
             id={'hw13-send-false'}
-            onClick={send(false)}
+            onClick={() => send(false)}
             xType={'secondary'}
             //
             disabled={info === loading}
@@ -85,7 +85,7 @@ const HW13 = () => {
           </SuperButton>
           <SuperButton
             id={'hw13-send-undefined'}
-            onClick={send(undefined)}
+            onClick={() => send(undefined)}
             xType={'secondary'}
             // дописать
             disabled={info === loading}
@@ -95,7 +95,7 @@ const HW13 = () => {
           </SuperButton>
           <SuperButton
             id={'hw13-send-null'}
-            onClick={send(null)} // имитация запроса на не корректный адрес
+            onClick={() => send(null)} // имитация запроса на не корректный адрес
             xType={'secondary'}
             // дописать
             disabled={info === loading}
