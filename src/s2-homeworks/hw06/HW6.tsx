@@ -23,7 +23,7 @@ const HW6 = () => {
     }
 
     return (
-        <div id={'hw6'} className={s2.hws}>
+        <div id={'hw6'} className={`${s2.hws} ${s2.hwFirst}`}>
             <div className={s2.hwTitle}>Homework #6</div>
 
             {/*демонстрация возможностей компоненты:*/}

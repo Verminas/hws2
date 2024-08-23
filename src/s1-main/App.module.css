@@ -24,6 +24,9 @@
     flex-direction: column;
     justify-content: space-between;
 }
+.hwFirst{
+    padding-top: 70px;
+}
 
 .hwTitle {
     font-family: Montserrat, sans-serif;

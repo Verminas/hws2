@@ -1,19 +1,44 @@
 .buttonsContainer {
+    display: flex;
+    gap: 24px;
+    padding-bottom: 30px;
 }
 
 .responseContainer {
+    min-height: 355px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 30px;
+
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+
 }
 
 .imageContainer {
+    max-width: 450px;
+    max-height: 320px;
 }
 
 .image {
+    object-fit: contain;
 }
 
 .textContainer{
+    max-width: 510px;
 }
 
 .code {
+    font-size: 30px;
+    line-height: 37px;
+    text-align: left;
+    padding-bottom: 15px;
+
 }
 
 .text {
