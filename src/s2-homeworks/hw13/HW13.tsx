@@ -19,6 +19,7 @@ const HW13 = () => {
   const [text, setText] = useState('')
   const [info, setInfo] = useState('')
   const [image, setImage] = useState('')
+  // const [disabled, setDisabled] = useState(null)
 
   const loading = '...loading'
 
@@ -35,24 +36,35 @@ const HW13 = () => {
         ? 'https://xxxxxx.ccc' // имитация запроса на не корректный адрес
         : 'https://samurai.it-incubator.io/api/3.0/homework/test'
 
-    changeCommonState()
+    changeCommonState(`${x}`)
 
+    // setInfo(info)
+    // setCode(code)
+    // setImage(image)
+    // setText(text)
+
+
+    // setDisabled(true)
     axios
       .post<{ errorText: string, info: string }>(url, {success: x})
       .then((res) => {
         changeCommonState(res.data.info, `Код ${res.status}!`, success200, res.data.errorText)
+        // setDisabled(false)
 
       })
       .catch((e) => {
         if (e.response?.status > 0) {
           if (e.response?.status >= 400 && e.response?.status < 500) {
             changeCommonState(e.response?.data?.info, `Ошибка ${e.response.status}!`, error400, e.response?.data?.errorText)
+            // setDisabled(false)
           } else {
             changeCommonState(e.response?.data?.info, `Ошибка ${e.response.status}!`, error500, e.response?.data?.errorText)
+            // setDisabled(false)
           }
 
         } else {
           changeCommonState(e.name, 'Error!', errorUnknown, e.message)
+          // setDisabled(false)
         }
       })
   }
@@ -68,7 +80,7 @@ const HW13 = () => {
             onClick={send(true)}
             xType={'secondary'}
             // дописать
-            disabled={info === loading}
+            disabled={info === 'true'}
 
           >
             Send true
