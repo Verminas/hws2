@@ -121,7 +121,7 @@ const HW13 = () => {
               {text}
             </div>
             <div id={'hw13-info'} className={s.info}>
-              {code && info}
+              {info}
             </div>
           </div>
         </div>
