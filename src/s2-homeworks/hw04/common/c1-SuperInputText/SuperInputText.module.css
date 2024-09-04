@@ -1,5 +1,6 @@
 .input:focus {
-    outline: 1px solid #D1D1D1;
+    /*outline: 1px solid #D1D1D1;*/
+    outline: 1px solid #0066CC;
 }
 
 .input {
@@ -8,7 +9,15 @@
     border: 1px solid #D1D1D1;
     border-radius: 5px;
     padding: 5px 10px;
+
+    font-family: Roboto,sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+
 }
+
 
 .inputWrapper {
     font-family: Montserrat, sans-serif;
