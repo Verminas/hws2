@@ -95,7 +95,7 @@ const HW15 = () => {
 
     useEffect(() => {
         const params = Object.fromEntries(searchParams)
-        sendQuery({page: Number(params.page), count: Number(params.count), sort: params.sort})
+        sendQuery({page: Number(params.page) || 1, count: Number(params.count) || 4, sort: params.sort})
         setPage(+params.page || 1)
         setCount(+params.count || 4)
         setSort(params.sort || '')
